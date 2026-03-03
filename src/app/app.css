@@ -1,0 +1,25 @@
+header {
+    background-color: rgb(4,30,80);
+    color: white;
+    border-bottom: 4px solid rgba(113, 113, 208, 0.819);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px gray;
+    text-align: center;
+}
+
+.title {
+    font-family: "Bitcount Grid Double", system-ui;
+    font-style: normal;
+    font-size: 40px;
+    color: white;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: medium;
+    color: white;
+    background-color: rgb(4,30,80);
+}
