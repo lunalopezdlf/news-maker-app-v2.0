@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { INew } from '../../interfaces/inew.interface';
 import { NEWS } from '../../db/news.db';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
 })

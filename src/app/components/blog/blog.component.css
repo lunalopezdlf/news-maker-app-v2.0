@@ -67,6 +67,9 @@
         width: calc(50% - 10px);
     }
 }
+small{
+    color: rgb(76, 76, 210);
+}
 
 /* ================= MEDIAQUERY ================= */
 @media (max-width: 768px) {
