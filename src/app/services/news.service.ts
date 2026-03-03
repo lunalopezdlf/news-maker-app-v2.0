@@ -12,7 +12,7 @@ export class NewsService {
         return this.myNews
     }
 
-    instanceof(noticia: INew): string {
+    insert(noticia: INew): string {
         this.myNews.push(noticia)
         return "Noticia insertada correctamente"
     }
