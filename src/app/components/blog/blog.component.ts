@@ -1,14 +1,13 @@
-import { Component, signal } from '@angular/core';
-import { INew } from '../../interfaces/inew.interface';
-import { NEWS } from '../../db/news.db';
-import { DatePipe } from '@angular/common';
+import { Component} from '@angular/core';
+import { FormComponent } from "../form/form.component";
+import { NewsListComponent } from "../news-list/news-list.component";
 
 @Component({
   selector: 'app-blog',
-  imports: [DatePipe],
+  imports: [FormComponent, NewsListComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
 })
 export class BlogComponent {
-    newsList = signal<INew[]>(NEWS)
+
 }

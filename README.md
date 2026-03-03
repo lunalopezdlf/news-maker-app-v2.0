@@ -1,59 +1,81 @@
-# NewsMakerAppV20
+# NewsMaker v2.0 - Sistema de Blogging
+Mejoras actividad 5 - Máster Full Stack Developer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+## 1. Introducción
+Mejoras en el proyecto desarrollado como parte de la Actividad 5 del Máster Full Stack Developer.
+La aplicación permite publicar noticias mediante un formulario y visualizar un listado dinámico de publicaciones dentro del mismo componente.
 
-## Development server
+## 2. Objetivos
+Crear una mini aplicación tipo blog en Angular que permita:
 
-To start a local development server, run:
+- Publicar noticias mediante un formulario  
+- Validar campos obligatorios  
+- Mostrar noticias en un listado dinámico  
+- Mantener las noticias ya publicadas  
+- Aplicar eventos y templating de Angular  
 
-```bash
-ng serve
+## 3. Tecnologías y conceptos usados
+-Angular
+-TypeScript
+-HTML5
+-CSS3
+-Two-way data binding (ngModel)
+-Directivas estructurales (@for, @empty)
+-Interfaces (INew)
+-Manejo de arrays
+-Responsive Design
+-Servicios de Angular (NewsService)
+-SweetAlert2 para alertas visuales
+
+## 4. Estructura del proyecto
+```
+newsMakerAppv2.0/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── blog/
+│   │   │   │   ├── blog.component.ts
+│   │   │   │   ├── blog.component.html
+│   │   │   │   └── blog.component.css
+│   │   │   ├── form/
+│   │   │   │   ├── form.component.ts
+│   │   │   │   ├── form.component.html
+│   │   │   │   └── form.component.css
+│   │   │   └── news-list/
+│   │   │       ├── news-list.component.ts
+│   │   │       ├── news-list.component.html
+│   │   │       └── news-list.component.css
+│   │   ├── services/
+│   │   │   └── news.service.ts
+│   │   ├── interfaces/
+│   │   │   └── inew.interface.ts
+│   │   ├── db/
+│   │   │   └── news.db.ts
+│   │   ├── app.ts
+│   │   ├── app.html
+│   │   └── app.css
+│   ├── styles.css
+│   └── index.html
+└── README.md
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 5. Funcionalidades principales  
+-Dos noticias iniciales cargadas desde un archivo externo (news.db.ts)
+-Formulario con validación obligatoria de todos los campos
+-Inserción dinámica en el array de noticias a través del NewsService
+-Validación de formato de URL de imagen (opcional)
+-Diseño responsive con media queries
+-Imágenes siempre centradas y escaladas correctamente (object-fit: cover)
+-Alertas visuales con SweetAlert2
 
-## Code scaffolding
+## 6. Autora  
+Luna López
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+---
 
-```bash
-ng generate component component-name
-```
+##  Vista previa del proyecto 
+>Vista web
+![Vista previa del proyecto en la web](public/docs/preview_web.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+>Vista Phone
+![Vista_previa_phone](public/docs/preview_phone.png)

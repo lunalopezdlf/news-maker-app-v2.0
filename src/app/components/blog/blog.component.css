@@ -1,8 +1,6 @@
 /* ================= ESTRUCTURA PRINCIPAL ================= */
 .container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: flex-start;
     gap: 40px;
     padding: 20px;
@@ -16,62 +14,35 @@
     box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 .form-section {
-    width: calc(35% - 20px);
+    width: 30%;
+    min-width: 310px;
 }
-
-.form-section div {
-    margin-bottom: 15px;
-}
-.form-section input,
-.form-section textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-
-.form-section textarea {
-    height: 150px;
-}
-
-
-
-.form-section button {
-    background-color: rgb(4,30,80);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.form-section button:hover {
-    background-color: rgb(123,138,156);
-}
-
 
 /* ================= LISTADO ================= */
 
 .list-section {
-    width: calc(65% - 20px);
-    
+    flex: 1;
 }
-.news{
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
 
-    article{
-        width: calc(50% - 10px);
+
+/* ================= MEDIA QUERY ================= */
+@media (max-width: 1265px) {
+    .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .form-section {
+        width: 30%;
+    }
+
+    .list-section {
+        width: 70%;
     }
 }
 small{
     color: rgb(76, 76, 210);
 }
 
-/* ================= MEDIAQUERY ================= */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
@@ -80,10 +51,5 @@ small{
     .form-section,
     .list-section {
         width: 100%;
-    }
-    .news{
-        article{
-        width: 100%;
-        }
     }
 }
