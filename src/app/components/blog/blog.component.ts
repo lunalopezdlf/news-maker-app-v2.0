@@ -1,9 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormComponent } from "../form/form.component";
+import { NewsListComponent } from "../news-list/news-list.component";
 
 @Component({
   selector: 'app-blog',
-  imports: [FormComponent],
+  imports: [FormComponent, NewsListComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css',
 })
