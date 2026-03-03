@@ -1,0 +1,19 @@
+<h2>Publicar nueva noticia</h2>
+<!-- FORMULARIO -->
+<div>
+    <label for="title">Título</label>
+    <input type="text" id="title" placeholder="Título" [(ngModel)]="newItem.title">
+</div>
+<div>
+    <label for="image">Imagen</label>
+    <input type="text" id="image" placeholder="URL imagen" [(ngModel)]="newItem.image">
+</div>
+<div>
+    <label for="date">Fecha de publicación</label>
+    <input type="date" id="date" [(ngModel)]="newItem.date" >
+</div>
+<div>
+    <label for="text">Noticia</label>
+    <textarea id="text" placeholder="Escribe tu noticia aquí..." [(ngModel)]="newItem.text"></textarea>
+</div>
+<button (click)="addNews()">Publicar</button>
