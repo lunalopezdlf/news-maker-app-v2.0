@@ -4,29 +4,29 @@
         <h2>Publicar nueva noticia</h2>
         <!-- FORMULARIO -->
         <div>
-            <label for="titulo">Titulo</label>
-            <input type="text" id="titulo" placeholder="Título" required >
+            <label for="title">Título</label>
+            <input type="text" id="title" placeholder="Título" [(ngModel)]="newItem.title">
         </div>
         <div>
-            <label for="imagen">Imagen</label>
-            <input type="text" id="imagen" placeholder="Título"  required >
+            <label for="image">Imagen</label>
+            <input type="text" id="image" placeholder="URL imagen" [(ngModel)]="newItem.image">
         </div>
         <div>
-            <label for="fecha">Fecha de publicacion</label>
-            <input type="date" id="fecha" placeholder="Título" required >
+            <label for="date">Fecha de publicación</label>
+            <input type="date" id="date" [(ngModel)]="newItem.date" >
         </div>
         <div>
-            <label for="texto">Noticia</label>
-            <textarea id="texto" placeholder="Escribe tu noticia..."  required ></textarea>
+            <label for="text">Noticia</label>
+            <textarea id="text" placeholder="Escribe tu noticia aquí..." [(ngModel)]="newItem.text"></textarea>
         </div>
-        <button>Publicar</button>
+        <button (click)="addNews()">Publicar</button>
         
     </section>
 
     <section class="list-section">
         <!-- LISTA NOTICIAS -->
         <div class="news">
-            @for(news of newsList(); track news){
+            @for(news of myNews(); track news){
             <article class="card">
                 <h2>{{news.title}}</h2>
                 <figure>
